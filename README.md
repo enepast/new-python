@@ -14,7 +14,7 @@ Disclaimer: This script draws inspiration from Ken Youens-Clark's book, offering
 Clone the repository containing the script generator.
 
 ```
-git clone <repository_url>
+git clone <[https://github.com/enepast/new-python>
 ```
 
 2. Navigate to the Script Generator:
@@ -72,7 +72,12 @@ Extend Functionality: The script can be extended to include additional functiona
 
 ## Important Notes
 
-Ensure the script generator (`script_generator.py`) is executable (`chmod +x script_generator.py`).
+Ensure the script generator (`new.py`) is executable (`chmod +x new.py`).
 Review the generated script to ensure it meets your requirements before execution.
+
+If you don't have pytest:
+1. `sudo apt install pip`
+2. `pip install pytest`
+3. run the script with `python3 -m pytest test.py`
 
 Feel free to adapt and enhance the script generator based on your needs. Happy coding!
