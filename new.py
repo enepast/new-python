@@ -36,10 +36,22 @@ def get_args() -> Args:
 
     parser.add_argument('program', help='Program name', type=str)
 
-    parser.add_argument('-n', '--name', type=str, default=defaults.get('name', username), help='Name for docstring')
-    parser.add_argument('-e', '--email', type=str, default=defaults.get('email', f'{username}@{hostname}'), help='Email for docstring')
-    parser.add_argument('-p', '--purpose', type=str, default=defaults.get('purpose', 'Write your purpose'), help='Purpose for docstring')
-    parser.add_argument('-f', '--force', help='Overwrite existing', action='store_true')
+    parser.add_argument('-n', '--name',
+                        type=str,
+                        default=defaults.get('name', username),
+                        help='Name for docstring')
+    parser.add_argument('-e', '--email',
+                        type=str,
+                        default=defaults.get('email', f'{username}@{hostname}'),
+                        help='Email for docstring')
+    parser.add_argument('-p', '--purpose',
+                        type=str,
+                        default=defaults.get('purpose', 'Write your purpose'),
+                        help='Purpose for docstring')
+    parser.add_argument('-f',
+                        '--force',
+                        help='Overwrite existing',
+                        action='store_true')
 
     args = parser.parse_args()
 
@@ -49,6 +61,7 @@ def get_args() -> Args:
         parser.error(f'Not a usable filename "{args.program}"')
 
     return Args(args.program, args.name, args.email, args.purpose, args.force)
+
 
 def main() -> None:
     """ Verifying the existence of the file in the current working directory """
@@ -66,6 +79,7 @@ def main() -> None:
         subprocess.run(['chmod', '+x', program], check=True)
 
     print(f'Done, see new script "{program}."')
+
 
 def body(args: Args) -> str:
     """ The program template """
