@@ -30,7 +30,7 @@ cd <script_generator_folder>
 Execute the script generator, providing the desired program name and optional details.
 
 ```
-./script_generator.py my_program -n "Your Name" -e "your.email@example.com" -p "Specify the purpose"
+./new.py my_program -n "Your Name" -e "your.email@example.com" -p "Specify the purpose"
 ```
 
 4. Review and Confirm:
