@@ -22,7 +22,7 @@ git clone <repository_url>
 Change your working directory to the script generator folder.
 
 ```
-cd <script_generator_folder>
+cd <new.py folder>
 ```
 
 3. Run the Script Generator:
